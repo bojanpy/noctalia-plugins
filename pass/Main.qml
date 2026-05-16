@@ -89,10 +89,10 @@ QtObject {
     }
 
     Component.onCompleted: {
-        LauncherProviderRegistry.registerPluginProvider("pass", _providerComponent, {});
+        LauncherProviderRegistry.registerPluginProvider(pluginApi.pluginId, _providerComponent, {});
     }
 
     Component.onDestruction: {
-        LauncherProviderRegistry.unregisterPluginProvider("pass");
+        LauncherProviderRegistry.unregisterPluginProvider(pluginApi.pluginId);
     }
 }
